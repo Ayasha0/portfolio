@@ -388,9 +388,10 @@ main {
 	margin-top: 8.4rem;
 }
 
+/*
 .certificates {
 	min-height: 100vh;
-}
+}*/
 
 .all-certificates-container {
 	margin-top: 3.2rem;
@@ -625,3 +626,4 @@ main {
 .contact-info p a {
 	margin-right: 1rem;
 }
+
