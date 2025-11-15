@@ -1,0 +1,409 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+	.roles::after {
+		content: "--->";
+		right: -100%;
+	}
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+	html {
+		font-size: 56.25%;
+	}
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+	html {
+		/* 8px / 16px = 0.5 = 50% */
+		font-size: 50%;
+	}
+
+	.container {
+		max-width: 800px;
+	}
+
+	.nav-links {
+		gap: 2rem;
+	}
+
+	.role-description {
+		padding: 5rem 6rem;
+	}
+
+	.role-description p,
+	.role-description p span {
+		font-size: 2.4rem;
+	}
+
+	.skill-card {
+		padding: 4px;
+		width: 60px;
+		height: 70px;
+	}
+}
+
+/* 800px */
+@media (max-width: 50em) {
+	html {
+		/* 8px / 16px = 0.5 = 50% */
+		font-size: 50%;
+	}
+
+	.container {
+		max-width: 700px;
+	}
+
+	.nav-links {
+		gap: 2rem;
+	}
+
+	.role-description {
+		padding: 5rem 6rem;
+	}
+
+	.role-description p,
+	.role-description p span {
+		font-size: 2.4rem;
+	}
+
+	.skill-card {
+		padding: 4px;
+		width: 60px;
+		height: 70px;
+	}
+
+	.all-projects-container {
+		column-gap: 10px;
+	}
+
+	.project-card {
+		width: 40rem;
+		height: 35rem;
+	}
+
+	.project-card .img-container {
+		height: 70%;
+	}
+
+	.certification-section .cerificates {
+		min-height: 100vh;
+	}
+
+	.all-certificates-container {
+		margin-top: 2.4rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 49em) {
+	.all-projects-container {
+		column-gap: 10px;
+	}
+
+	.project-card {
+		flex: 1 1 40%;
+		/* width: 50%; */
+	}
+
+	.project-card .img-container {
+		height: 60%;
+	}
+
+	.internship-card .skills span {
+		padding: 3px 4px;
+		margin-left: 0.5rem;
+		border-radius: 3px;
+	}
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+	.container {
+		max-width: 600px;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	header nav .menu {
+		display: block;
+		margin-right: 2rem;
+		cursor: pointer;
+	}
+
+	header .nav-links.menu-active {
+		position: fixed;
+		right: 0;
+		top: 10rem;
+		display: block;
+		width: 200px;
+		flex-direction: column;
+		background: #f4f4f4;
+		box-shadow: 0 0 3px #f6f6f6;
+		/* backdrop-filter: blur(10px); */
+
+		transition: all 300ms linear;
+	}
+
+	.nav-links li.active,
+	.nav-links li.resume {
+		background: transparent; /* or whatever default you use */
+		color: inherit; /* resets to normal text color */
+	}
+
+	.nav-links li.active a,
+	.nav-links li.resume a {
+		color: inherit; /* resets link color */
+	}
+
+	.nav-links.menu-active li {
+		text-transform: capitalize;
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+
+		transition: all 300ms linear;
+		cursor: pointer;
+		border-radius: 0;
+		background: transparent;
+	}
+
+	.nav-links.menu-active li:hover {
+		background: #eee;
+	}
+
+	.nav-links.menu-active li a {
+		color: #3f3f3f;
+		width: 100%;
+	}
+
+	.roles::after {
+		content: "--->";
+		right: -120%;
+	}
+
+	.menu i {
+		font-size: 2.4rem;
+		color: #3f3f3f;
+	}
+
+	.role-description {
+		padding: 3rem 5rem;
+	}
+
+	.role-description p,
+	.role-description p span {
+		font-size: 2rem;
+	}
+
+	.skill-card {
+		padding: 4px;
+		width: 60px;
+		height: 70px;
+	}
+}
+
+/**************************/
+/* BELOW 592px ~ 600px(Phones) */
+/**************************/
+
+@media (max-width: 37em) {
+	.container {
+		max-width: 500px;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	header nav .menu {
+		display: block;
+		margin-right: 2rem;
+		cursor: pointer;
+	}
+
+	header .nav-links.menu-active {
+		position: fixed;
+		right: 0;
+		top: 10rem;
+		display: block;
+		width: 200px;
+		flex-direction: column;
+		background: #f4f4f4;
+		box-shadow: 0 0 3px #f6f6f6;
+		/* backdrop-filter: blur(10px); */
+
+		transition: all 300ms linear;
+	}
+
+	.nav-links li.active,
+	.nav-links li.resume {
+		background: transparent; /* or whatever default you use */
+		color: inherit; /* resets to normal text color */
+	}
+
+	.nav-links li.active a,
+	.nav-links li.resume a {
+		color: inherit; /* resets link color */
+	}
+
+	.nav-links.menu-active li {
+		text-transform: capitalize;
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+
+		transition: all 300ms linear;
+		cursor: pointer;
+		border-radius: 0;
+		background: transparent;
+	}
+
+	.nav-links.menu-active li:hover {
+		background: #eee;
+	}
+
+	.nav-links.menu-active li a {
+		color: #3f3f3f;
+		width: 100%;
+	}
+
+	.roles {
+		display: none;
+	}
+
+	.roles::after {
+		content: "";
+		right: -120%;
+	}
+
+	.menu i {
+		font-size: 2.4rem;
+		color: #3f3f3f;
+	}
+
+	.intro-section .intro {
+		display: block;
+		width: 100%;
+	}
+
+	.role-description {
+		width: 100%;
+		margin-left: 0;
+		padding: 3rem 5rem;
+	}
+
+	.role-description p,
+	.role-description p span {
+		font-size: 2rem;
+	}
+
+	.skills-grid {
+		gap: 1.6rem;
+	}
+
+	.skill-card {
+		padding: 4px;
+		width: 50px;
+		height: 60px;
+	}
+
+	/* Container for all project cards */
+	.all-projects-container {
+		margin-top: 2.4rem;
+		flex-direction: column;
+		column-gap: 0;
+		row-gap: 2rem;
+	}
+
+	/* Individual project card */
+	.project-card {
+		flex: 1; /* two columns per row */
+		width: 100%; /* optional */
+		height: 45rem;
+		text-align: left;
+	}
+
+	.project-card .img-container {
+		width: 100%;
+		height: 60%;
+		border-radius: 15px;
+	}
+
+	.all-certificates-container {
+		margin-top: 2.4rem;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 10px;
+		align-content: center;
+		justify-items: center;
+		/* align-items: center;
+		justify-content: center; */
+	}
+
+	.certificate-card {
+		width: 400px;
+		padding: 15px;
+		height: 350px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.certificate-card p {
+		font-size: 1.6rem;
+		color: #555;
+		font-weight: 400;
+	}
+
+	.education-container {
+		margin-top: 2.4rem;
+		gap: 3rem;
+		flex-direction: column;
+	}
+
+	.interships {
+		min-height: 100vh;
+	}
+
+	.internship-container {
+		align-items: center;
+	}
+
+	.internship-card {
+		flex-direction: column;
+		gap: 2rem; /* space between image and content */
+		min-height: 400px;
+		padding: 1.6rem 2rem;
+		width: 100%;
+		width: 400px;
+		background-color: #f9f9f9;
+		border: 1px solid #ccc;
+	}
+
+	.internship-card img {
+		width: 100%;
+		display: block;
+	}
+
+	.contact-info {
+		gap: 1rem;
+		width: 50%;
+		padding: 1rem;
+	}
+}
